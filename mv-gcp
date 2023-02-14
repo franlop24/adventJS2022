@@ -1,0 +1,18 @@
+
+
+/var/www/html/index.html
+
+mkdir django
+cd django
+python3 -m venv venv
+sudo apt install python3.8-venv
+python3 -m venv venv
+django-admin startproject iric
+cd iric
+sudo nano iric/setting.py
+#### agregamos ip a allowed hosts
+ctrl + x
+python manage.py migrate
+python manage.py createsuperuser
+
+python manage.py runserver 0.0.0.0:8000
